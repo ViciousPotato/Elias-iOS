@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CB235C311A5D8B6A0081FEEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB235C301A5D8B690081FEEA /* AppDelegate.swift */; };
+		CB235C331A5D8B6A0081FEEA /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB235C321A5D8B6A0081FEEA /* MasterViewController.swift */; };
+		CB235C351A5D8B6A0081FEEA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB235C341A5D8B6A0081FEEA /* DetailViewController.swift */; };
+		CB235C381A5D8B6A0081FEEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB235C361A5D8B6A0081FEEA /* Main.storyboard */; };
+		CB235C3A1A5D8B6A0081FEEA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB235C391A5D8B6A0081FEEA /* Images.xcassets */; };
+		CB235C3D1A5D8B6A0081FEEA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB235C3B1A5D8B6A0081FEEA /* LaunchScreen.xib */; };
+		CB235C491A5D8B6A0081FEEA /* EliasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB235C481A5D8B6A0081FEEA /* EliasTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CB235C431A5D8B6A0081FEEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB235C231A5D8B690081FEEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB235C2A1A5D8B690081FEEA;
+			remoteInfo = Elias;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CB235C2B1A5D8B690081FEEA /* Elias.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Elias.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB235C2F1A5D8B690081FEEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB235C301A5D8B690081FEEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CB235C321A5D8B6A0081FEEA /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		CB235C341A5D8B6A0081FEEA /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		CB235C371A5D8B6A0081FEEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CB235C391A5D8B6A0081FEEA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CB235C3C1A5D8B6A0081FEEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		CB235C421A5D8B6A0081FEEA /* EliasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EliasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB235C471A5D8B6A0081FEEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB235C481A5D8B6A0081FEEA /* EliasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EliasTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CB235C281A5D8B690081FEEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB235C3F1A5D8B6A0081FEEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CB235C221A5D8B690081FEEA = {
+			isa = PBXGroup;
+			children = (
+				CB235C2D1A5D8B690081FEEA /* Elias */,
+				CB235C451A5D8B6A0081FEEA /* EliasTests */,
+				CB235C2C1A5D8B690081FEEA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CB235C2C1A5D8B690081FEEA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB235C2B1A5D8B690081FEEA /* Elias.app */,
+				CB235C421A5D8B6A0081FEEA /* EliasTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CB235C2D1A5D8B690081FEEA /* Elias */ = {
+			isa = PBXGroup;
+			children = (
+				CB235C301A5D8B690081FEEA /* AppDelegate.swift */,
+				CB235C321A5D8B6A0081FEEA /* MasterViewController.swift */,
+				CB235C341A5D8B6A0081FEEA /* DetailViewController.swift */,
+				CB235C361A5D8B6A0081FEEA /* Main.storyboard */,
+				CB235C391A5D8B6A0081FEEA /* Images.xcassets */,
+				CB235C3B1A5D8B6A0081FEEA /* LaunchScreen.xib */,
+				CB235C2E1A5D8B690081FEEA /* Supporting Files */,
+			);
+			path = Elias;
+			sourceTree = "<group>";
+		};
+		CB235C2E1A5D8B690081FEEA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CB235C2F1A5D8B690081FEEA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CB235C451A5D8B6A0081FEEA /* EliasTests */ = {
+			isa = PBXGroup;
+			children = (
+				CB235C481A5D8B6A0081FEEA /* EliasTests.swift */,
+				CB235C461A5D8B6A0081FEEA /* Supporting Files */,
+			);
+			path = EliasTests;
+			sourceTree = "<group>";
+		};
+		CB235C461A5D8B6A0081FEEA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CB235C471A5D8B6A0081FEEA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CB235C2A1A5D8B690081FEEA /* Elias */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB235C4C1A5D8B6A0081FEEA /* Build configuration list for PBXNativeTarget "Elias" */;
+			buildPhases = (
+				CB235C271A5D8B690081FEEA /* Sources */,
+				CB235C281A5D8B690081FEEA /* Frameworks */,
+				CB235C291A5D8B690081FEEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Elias;
+			productName = Elias;
+			productReference = CB235C2B1A5D8B690081FEEA /* Elias.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CB235C411A5D8B6A0081FEEA /* EliasTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB235C4F1A5D8B6A0081FEEA /* Build configuration list for PBXNativeTarget "EliasTests" */;
+			buildPhases = (
+				CB235C3E1A5D8B6A0081FEEA /* Sources */,
+				CB235C3F1A5D8B6A0081FEEA /* Frameworks */,
+				CB235C401A5D8B6A0081FEEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CB235C441A5D8B6A0081FEEA /* PBXTargetDependency */,
+			);
+			name = EliasTests;
+			productName = EliasTests;
+			productReference = CB235C421A5D8B6A0081FEEA /* EliasTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CB235C231A5D8B690081FEEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = zhou;
+				TargetAttributes = {
+					CB235C2A1A5D8B690081FEEA = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					CB235C411A5D8B6A0081FEEA = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = CB235C2A1A5D8B690081FEEA;
+					};
+				};
+			};
+			buildConfigurationList = CB235C261A5D8B690081FEEA /* Build configuration list for PBXProject "Elias" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CB235C221A5D8B690081FEEA;
+			productRefGroup = CB235C2C1A5D8B690081FEEA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CB235C2A1A5D8B690081FEEA /* Elias */,
+				CB235C411A5D8B6A0081FEEA /* EliasTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CB235C291A5D8B690081FEEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB235C381A5D8B6A0081FEEA /* Main.storyboard in Resources */,
+				CB235C3D1A5D8B6A0081FEEA /* LaunchScreen.xib in Resources */,
+				CB235C3A1A5D8B6A0081FEEA /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB235C401A5D8B6A0081FEEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CB235C271A5D8B690081FEEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB235C351A5D8B6A0081FEEA /* DetailViewController.swift in Sources */,
+				CB235C331A5D8B6A0081FEEA /* MasterViewController.swift in Sources */,
+				CB235C311A5D8B6A0081FEEA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB235C3E1A5D8B6A0081FEEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB235C491A5D8B6A0081FEEA /* EliasTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CB235C441A5D8B6A0081FEEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CB235C2A1A5D8B690081FEEA /* Elias */;
+			targetProxy = CB235C431A5D8B6A0081FEEA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CB235C361A5D8B6A0081FEEA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB235C371A5D8B6A0081FEEA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CB235C3B1A5D8B6A0081FEEA /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB235C3C1A5D8B6A0081FEEA /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CB235C4A1A5D8B6A0081FEEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CB235C4B1A5D8B6A0081FEEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CB235C4D1A5D8B6A0081FEEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Elias/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CB235C4E1A5D8B6A0081FEEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Elias/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CB235C501A5D8B6A0081FEEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = EliasTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Elias.app/Elias";
+			};
+			name = Debug;
+		};
+		CB235C511A5D8B6A0081FEEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = EliasTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Elias.app/Elias";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CB235C261A5D8B690081FEEA /* Build configuration list for PBXProject "Elias" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB235C4A1A5D8B6A0081FEEA /* Debug */,
+				CB235C4B1A5D8B6A0081FEEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB235C4C1A5D8B6A0081FEEA /* Build configuration list for PBXNativeTarget "Elias" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB235C4D1A5D8B6A0081FEEA /* Debug */,
+				CB235C4E1A5D8B6A0081FEEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CB235C4F1A5D8B6A0081FEEA /* Build configuration list for PBXNativeTarget "EliasTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB235C501A5D8B6A0081FEEA /* Debug */,
+				CB235C511A5D8B6A0081FEEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CB235C231A5D8B690081FEEA /* Project object */;
+}
