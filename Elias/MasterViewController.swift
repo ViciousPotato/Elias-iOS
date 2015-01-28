@@ -24,6 +24,14 @@ class MasterViewController: UITableViewController {
 
         let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
         self.navigationItem.rightBarButtonItem = addButton
+        
+        dispatch_async(dispatch_get_main_queue(), {[weak self] in
+            let alertController = UIAlertController(title: "GCD", message: "GCD", preferredStyle: .Alert)
+            
+            alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+            
+            self!.presentViewController(alertController, animated: true, completion: nil);
+        })
     }
 
     override func didReceiveMemoryWarning() {

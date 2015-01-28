@@ -164,6 +164,11 @@
 				TargetAttributes = {
 					CB235C2A1A5D8B690081FEEA = {
 						CreatedOnToolsVersion = 6.1.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					CB235C411A5D8B6A0081FEEA = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -409,6 +414,7 @@
 				CB235C4E1A5D8B6A0081FEEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CB235C4F1A5D8B6A0081FEEA /* Build configuration list for PBXNativeTarget "EliasTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +423,7 @@
 				CB235C511A5D8B6A0081FEEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
