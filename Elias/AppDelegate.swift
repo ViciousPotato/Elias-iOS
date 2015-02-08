@@ -13,10 +13,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var downloadManager: AFHTTPRequestOperationManager?
+    var lastSyncTimeStamp: Int?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        // Doing some initialization
         downloadManager = AFHTTPRequestOperationManager()
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.registerDefaults(["LastSyncTimeStamp": NSNumber(bool: true)])
+        lastSyncTimeStamp = defaults.integerForKey("LastSyncTimeStamp")
 
         application.setMinimumBackgroundFetchInterval(UIApplicationBackgroundFetchIntervalMinimum)
         return true
@@ -45,7 +50,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(application: UIApplication, performFetchWithCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
-        println("Hello there")
+        // TODO: What if the app just started and user pressed home
+        if (self.loadBitsInJSON()) {
+            completionHandler(.NewData)
+        } else {
+            completionHandler(.NoData)
+        }
+    }
+    
+    func loadBitsInJSON() -> Bool {
+        let now = Util.now
+        
+        return true
     }
 
 }
