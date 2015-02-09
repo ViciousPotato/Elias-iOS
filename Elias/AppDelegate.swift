@@ -23,6 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         defaults.registerDefaults(["LastSyncTimeStamp": NSNumber(bool: true)])
         lastSyncTimeStamp = defaults.integerForKey("LastSyncTimeStamp")
 
+        loadBitsInJSON()
+        
         application.setMinimumBackgroundFetchInterval(UIApplicationBackgroundFetchIntervalMinimum)
         return true
     }
@@ -59,8 +61,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func loadBitsInJSON() -> Bool {
-        let now = Util.now
-        
+        let requestURL = "http://viciouspotato.me/bit/since/0"
+        downloadManager?.GET(requestURL, parameters: nil,
+            success: { (operation, response)-> Void in
+                print(response)
+            }, failure: {(operation, error)-> Void in
+                print(error)
+            })
         return true
     }
 

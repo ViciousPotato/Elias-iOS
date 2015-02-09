@@ -8,6 +8,6 @@
 
 import Foundation
 
-class Util {
+struct Util {
     static var now = Int(NSTimeIntervalSince1970)
 }
