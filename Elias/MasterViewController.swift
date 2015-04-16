@@ -9,9 +9,7 @@
 import UIKit
 
 class MasterViewController: UITableViewController {
-
-    var objects = NSMutableArray()
-
+    let delegate = UIApplication.sharedApplication().delegate as AppDelegate
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,14 +22,6 @@ class MasterViewController: UITableViewController {
 
         let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
         self.navigationItem.rightBarButtonItem = addButton
-        
-        dispatch_async(dispatch_get_main_queue(), {[weak self] in
-            let alertController = UIAlertController(title: "GCD", message: "GCD", preferredStyle: .Alert)
-            
-            alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-            
-            self!.presentViewController(alertController, animated: true, completion: nil);
-        })
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,7 +30,7 @@ class MasterViewController: UITableViewController {
     }
 
     func insertNewObject(sender: AnyObject) {
-        objects.insertObject(NSDate(), atIndex: 0)
+        delegate.bits.insert(Bit(content: "new bit"), atIndex: 0)
         let indexPath = NSIndexPath(forRow: 0, inSection: 0)
         self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
     }
@@ -50,7 +40,7 @@ class MasterViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow() {
-                let object = objects[indexPath.row] as NSDate
+                let object = delegate.bits[indexPath.row] as Bit
             (segue.destinationViewController as DetailViewController).detailItem = object
             }
         }
@@ -63,14 +53,14 @@ class MasterViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return objects.count
+        return delegate.bits.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
 
-        let object = objects[indexPath.row] as NSDate
-        cell.textLabel!.text = object.description
+        let object = delegate.bits[indexPath.row] as Bit
+        cell.textLabel!.text = object.content
         return cell
     }
 
@@ -81,13 +71,12 @@ class MasterViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            objects.removeObjectAtIndex(indexPath.row)
+            delegate.bits.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }
     }
-
 
 }
 

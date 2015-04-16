@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var downloadManager: AFHTTPRequestOperationManager?
     var lastSyncTimeStamp: Int?
+    var bits: [Bit] = []
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Doing some initialization
@@ -64,7 +65,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let requestURL = "http://viciouspotato.me/bit/since/0"
         downloadManager?.GET(requestURL, parameters: nil,
             success: { (operation, response)-> Void in
-                print(response)
+                let responseArr = response as NSArray
+                for bit in responseArr {
+                    self.bits.append(Bit.fromJSONDic(bit as NSDictionary))
+                }
+                if let masterView = self.window?.rootViewController?.view as? UITableView {
+                    masterView.reloadData()
+                }
             }, failure: {(operation, error)-> Void in
                 print(error)
             })
