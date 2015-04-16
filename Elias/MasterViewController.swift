@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import MobileCoreServices
 
-class MasterViewController: UITableViewController {
+class MasterViewController:
+  UITableViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     let delegate = UIApplication.sharedApplication().delegate as AppDelegate
-
+    var cameraController: UIImagePickerController?
+  
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -20,19 +23,25 @@ class MasterViewController: UITableViewController {
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
 
-        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
+        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "takePhoto:")
         self.navigationItem.rightBarButtonItem = addButton
-    }
+    
+        self.cameraController = UIImagePickerController()
+        if let c = self.cameraController {
+          // c.sourceType = .Camera
+          c.mediaTypes = [kUTTypeImage as String]
+          c.allowsEditing = true
+          c.delegate = self
+        }
+  }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
-    func insertNewObject(sender: AnyObject) {
-        delegate.bits.insert(Bit(content: "new bit"), atIndex: 0)
-        let indexPath = NSIndexPath(forRow: 0, inSection: 0)
-        self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+    func takePhoto(sender: AnyObject) {
+        presentViewController(self.cameraController!, animated: true, completion: nil)
     }
 
     // MARK: - Segues
@@ -60,7 +69,7 @@ class MasterViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
 
         let object = delegate.bits[indexPath.row] as Bit
-        cell.textLabel!.text = object.content
+        cell.textLabel.text = object.content
         return cell
     }
 
