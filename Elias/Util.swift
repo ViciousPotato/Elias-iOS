@@ -9,5 +9,9 @@
 import Foundation
 
 struct Util {
-    static var now = Int(NSTimeIntervalSince1970)
+  static var now = Int(NSTimeIntervalSince1970)
+  
+  static var imageUploadUrl = "http://127.0.0.1:3000/upload"
+  
+  static var imageCompressRate =  CGFloat(0.8)
 }

@@ -54,17 +54,34 @@ class MasterViewController:
     if let type: AnyObject = mediaType {
       if type is String {
         let t = type as String
-        
+        MBProgressHUD.showHUDAddedTo(self.view, animated: true)
         if t == kUTTypeImage as NSString {
           let image = info[UIImagePickerControllerOriginalImage] as? UIImage
           if let i = image {
-            print("Hello")
+            // Upload image
+            
+            delegate.downloadManager!.POST(
+              Util.imageUploadUrl,
+              parameters: nil,
+              constructingBodyWithBlock: { (formData : AFMultipartFormData!) -> Void in
+                let data = UIImageJPEGRepresentation(image, Util.imageCompressRate)
+                formData.appendPartWithFileData(data, name: "attach", fileName: "Upload.jpg", mimeType: "image/jpeg")
+              },
+              success: { (request, response) -> Void in
+                println("request : \(request), response: \(response)")
+                MBProgressHUD.hideHUDForView(self.view, animated: true)
+                picker.dismissViewControllerAnimated(true, completion: nil)
+              },
+              failure: { (request, error) -> Void in
+                println("request : \(request), error: \(error)")
+                MBProgressHUD.hideHUDForView(self.view, animated: true)
+                picker.dismissViewControllerAnimated(true, completion: nil)
+              })
           }
         }
       }
     }
     
-    picker.dismissViewControllerAnimated(true, completion: nil)
   }
 
   // MARK: - Segues
