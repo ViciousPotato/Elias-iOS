@@ -73,9 +73,11 @@ class MasterViewController:
                 picker.dismissViewControllerAnimated(true, completion: nil)
               },
               failure: { (request, error) -> Void in
-                println("request : \(request), error: \(error)")
                 MBProgressHUD.hideHUDForView(self.view, animated: true)
                 picker.dismissViewControllerAnimated(true, completion: nil)
+
+                self.view.makeToast("Error uploading image", duration: 3.0, position: CSToastPositionBottom)
+                println("request : \(request), error: \(error)")
               })
           }
         }

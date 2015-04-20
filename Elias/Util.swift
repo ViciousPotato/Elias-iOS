@@ -13,5 +13,7 @@ struct Util {
   
   static var imageUploadUrl = "http://127.0.0.1:3000/upload"
   
+  static var createBitUrl = "http://127.0.0.1:3000/bit"
+  
   static var imageCompressRate =  CGFloat(0.8)
 }

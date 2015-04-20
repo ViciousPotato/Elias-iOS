@@ -4,3 +4,4 @@
 
 #include <AFNetworking/AFNetworking.h>
 #include <MBProgressHUD/MBProgressHUD.h>
+#include <Toast/UIView+Toast.h>

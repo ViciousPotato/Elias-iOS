@@ -21,13 +21,16 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - MBProgressHUD (0.9.1)
+  - Toast (2.4)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.5.0)
   - MBProgressHUD (~> 0.8)
+  - Toast (~> 2.4)
 
 SPEC CHECKSUMS:
   AFNetworking: 96ac9bf3eda33582701cb1fcc5b896aa1e20311e
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
+  Toast: 0773b8fc0e97352ca6054517bec7ebdd4110029d
 
 COCOAPODS: 0.35.0
