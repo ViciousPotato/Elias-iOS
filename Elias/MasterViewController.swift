@@ -69,6 +69,11 @@ class MasterViewController:
               },
               success: { (request, response) -> Void in
                 println("request : \(request), response: \(response)")
+
+                let jsonResponse = response as NSDictionary
+                let scaledPath = jsonResponse.objectForKey("scaled") as String
+                self.createBitWithOneImage(scaledPath)
+
                 MBProgressHUD.hideHUDForView(self.view, animated: true)
                 picker.dismissViewControllerAnimated(true, completion: nil)
               },
@@ -84,6 +89,17 @@ class MasterViewController:
       }
     }
     
+  }
+  
+  func createBitWithOneImage(path: String) {
+    delegate.downloadManager!.POST(Util.createBitUrl, parameters: ["content": "![img](\(path))"],
+      constructingBodyWithBlock: nil,
+      success: { (request, response) -> Void in
+        println("request: \(request) response:\(response)")
+      },
+      failure: { (request, error) -> Void in
+        println("request: \(request) response:\(error)")
+      })
   }
 
   // MARK: - Segues
