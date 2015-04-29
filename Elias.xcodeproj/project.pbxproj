@@ -16,6 +16,8 @@
 		CB235C3D1A5D8B6A0081FEEA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB235C3B1A5D8B6A0081FEEA /* LaunchScreen.xib */; };
 		CB235C491A5D8B6A0081FEEA /* EliasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB235C481A5D8B6A0081FEEA /* EliasTests.swift */; };
 		CB430AE51A8B83A0000E9558 /* BitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB430AE41A8B83A0000E9558 /* BitModel.swift */; };
+		CB70DB011AF13D74001B8025 /* BitSummaryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB70DB001AF13D74001B8025 /* BitSummaryCell.xib */; };
+		CB70DB031AF13E95001B8025 /* BitSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB70DB021AF13E95001B8025 /* BitSummaryCell.swift */; };
 		DCBE6C587161B4F8BBE5E721 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E58CFD137881927535D02EC /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,8 @@
 		CB235C481A5D8B6A0081FEEA /* EliasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EliasTests.swift; sourceTree = "<group>"; };
 		CB39FE071A7A83910055DD47 /* Elias-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Elias-Bridging-Header.h"; sourceTree = "<group>"; };
 		CB430AE41A8B83A0000E9558 /* BitModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitModel.swift; sourceTree = "<group>"; };
+		CB70DB001AF13D74001B8025 /* BitSummaryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BitSummaryCell.xib; sourceTree = "<group>"; };
+		CB70DB021AF13E95001B8025 /* BitSummaryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitSummaryCell.swift; sourceTree = "<group>"; };
 		E9AF17E14188A026994FE547 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		EF8DC5CD198C2EC8912FF71C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,6 +114,8 @@
 			children = (
 				CB235C301A5D8B690081FEEA /* AppDelegate.swift */,
 				CB235C321A5D8B6A0081FEEA /* MasterViewController.swift */,
+				CB70DB001AF13D74001B8025 /* BitSummaryCell.xib */,
+				CB70DB021AF13E95001B8025 /* BitSummaryCell.swift */,
 				CB430AE41A8B83A0000E9558 /* BitModel.swift */,
 				CB235C341A5D8B6A0081FEEA /* DetailViewController.swift */,
 				CB235C361A5D8B6A0081FEEA /* Main.storyboard */,
@@ -236,6 +242,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB70DB011AF13D74001B8025 /* BitSummaryCell.xib in Resources */,
 				CB235C381A5D8B6A0081FEEA /* Main.storyboard in Resources */,
 				CB235C3D1A5D8B6A0081FEEA /* LaunchScreen.xib in Resources */,
 				CB235C3A1A5D8B6A0081FEEA /* Images.xcassets in Resources */,
@@ -291,6 +298,7 @@
 			files = (
 				CB430AE51A8B83A0000E9558 /* BitModel.swift in Sources */,
 				CB235C351A5D8B6A0081FEEA /* DetailViewController.swift in Sources */,
+				CB70DB031AF13E95001B8025 /* BitSummaryCell.swift in Sources */,
 				CB235C331A5D8B6A0081FEEA /* MasterViewController.swift in Sources */,
 				CB235C311A5D8B6A0081FEEA /* AppDelegate.swift in Sources */,
 				CB1F308B1A87B48B008DADEF /* Util.swift in Sources */,

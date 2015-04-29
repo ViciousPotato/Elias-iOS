@@ -15,18 +15,26 @@ class MasterViewController:
   var cameraController: UIImagePickerController?
 
   override func awakeFromNib() {
-      super.awakeFromNib()
+    super.awakeFromNib()
   }
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem()
+
+    let listImage = UIImage(named: "NavListButton")
+    self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: listImage, style: .Plain, target: self, action: "listButtonTouched")
 
     let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "takePhoto:")
     self.navigationItem.rightBarButtonItem = addButton
 
     self.cameraController = UIImagePickerController()
+    
+    self.loadBitsInJSON()
+  }
+  
+  func listButtonTouched()
+  {
+  
   }
 
   override func didReceiveMemoryWarning() {
@@ -88,7 +96,6 @@ class MasterViewController:
         }
       }
     }
-    
   }
   
   func createBitWithOneImage(path: String) {
@@ -105,12 +112,12 @@ class MasterViewController:
   // MARK: - Segues
 
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-      if segue.identifier == "showDetail" {
-          if let indexPath = self.tableView.indexPathForSelectedRow() {
-              let object = delegate.bits[indexPath.row] as Bit
-          (segue.destinationViewController as! DetailViewController).detailItem = object
-          }
-      }
+    if segue.identifier == "showDetail" {
+        if let indexPath = self.tableView.indexPathForSelectedRow() {
+            let object = delegate.bits[indexPath.row] as Bit
+        (segue.destinationViewController as! DetailViewController).detailItem = object
+        }
+    }
   }
 
   // MARK: - Table View
@@ -124,11 +131,20 @@ class MasterViewController:
   }
 
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-      let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
+    let bit = delegate.bits[indexPath.row] as Bit
 
-      let object = delegate.bits[indexPath.row] as Bit
-      cell.textLabel?.text = object.content
+    if let cell = tableView.dequeueReusableCellWithIdentifier("BitSummaryCell") as? BitSummaryCell {
+      cell.detailLabel.text = bit.content
       return cell
+    }
+    else {
+      let nib = NSBundle.mainBundle().loadNibNamed("BitSummaryCell", owner: self, options: nil)
+      let cell = nib[0] as! BitSummaryCell
+
+      cell.detailLabel.text = bit.content
+      
+      return cell
+    }
   }
 
   override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -143,6 +159,21 @@ class MasterViewController:
       } else if editingStyle == .Insert {
           // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
       }
+  }
+  
+  func loadBitsInJSON() -> Bool {
+    let requestURL = Util.initLoadUrl
+    delegate.downloadManager?.GET(requestURL, parameters: nil,
+      success: { (operation, response)-> Void in
+        let responseArr = response as! NSArray
+        for bit in responseArr {
+          self.delegate.bits.append(Bit.fromJSONDic(bit as! NSDictionary))
+        }
+        (self.view as! UITableView).reloadData()
+      }, failure: {(operation, error)-> Void in
+        print(error)
+    })
+    return true
   }
 }
 
