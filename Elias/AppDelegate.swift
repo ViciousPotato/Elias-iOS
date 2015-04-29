@@ -62,12 +62,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func loadBitsInJSON() -> Bool {
-        let requestURL = "http://viciouspotato.me/bit/since/0"
+        let requestURL = Util.initLoadUrl
         downloadManager?.GET(requestURL, parameters: nil,
             success: { (operation, response)-> Void in
-                let responseArr = response as NSArray
+                let responseArr = response as! NSArray
                 for bit in responseArr {
-                    self.bits.append(Bit.fromJSONDic(bit as NSDictionary))
+                    self.bits.append(Bit.fromJSONDic(bit as! NSDictionary))
                 }
                 if let masterView = self.window?.rootViewController?.view as? UITableView {
                     masterView.reloadData()

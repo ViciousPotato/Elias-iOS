@@ -11,7 +11,7 @@ import MobileCoreServices
 
 class MasterViewController:
   UITableViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-  let delegate = UIApplication.sharedApplication().delegate as AppDelegate
+  let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
   var cameraController: UIImagePickerController?
 
   override func awakeFromNib() {
@@ -53,7 +53,7 @@ class MasterViewController:
     
     if let type: AnyObject = mediaType {
       if type is String {
-        let t = type as String
+        let t = type as! String
         MBProgressHUD.showHUDAddedTo(self.view, animated: true)
         if t == kUTTypeImage as NSString {
           let image = info[UIImagePickerControllerOriginalImage] as? UIImage
@@ -70,8 +70,8 @@ class MasterViewController:
               success: { (request, response) -> Void in
                 println("request : \(request), response: \(response)")
 
-                let jsonResponse = response as NSDictionary
-                let scaledPath = jsonResponse.objectForKey("scaled") as String
+                let jsonResponse = response as! NSDictionary
+                let scaledPath = jsonResponse.objectForKey("scaled") as! String
                 self.createBitWithOneImage(scaledPath)
 
                 MBProgressHUD.hideHUDForView(self.view, animated: true)
@@ -108,7 +108,7 @@ class MasterViewController:
       if segue.identifier == "showDetail" {
           if let indexPath = self.tableView.indexPathForSelectedRow() {
               let object = delegate.bits[indexPath.row] as Bit
-          (segue.destinationViewController as DetailViewController).detailItem = object
+          (segue.destinationViewController as! DetailViewController).detailItem = object
           }
       }
   }
@@ -124,7 +124,7 @@ class MasterViewController:
   }
 
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-      let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+      let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
 
       let object = delegate.bits[indexPath.row] as Bit
       cell.textLabel?.text = object.content
