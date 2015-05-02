@@ -20,6 +20,10 @@ class MasterViewController:
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    let tblView = self.view as! UITableView
+    tblView.estimatedRowHeight = 44.0
+    tblView.rowHeight = UITableViewAutomaticDimension
 
     let listImage = UIImage(named: "NavListButton")
     self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: listImage, style: .Plain, target: self, action: "listButtonTouched")
