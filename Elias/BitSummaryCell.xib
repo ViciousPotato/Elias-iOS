@@ -12,13 +12,19 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZXH-oV-QCR" id="etJ-om-zV8">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CpZ-Xc-3jL">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CpZ-Xc-3jL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="147"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="CpZ-Xc-3jL" secondAttribute="bottom" constant="5" id="JMT-lH-yYU"/>
+                    <constraint firstAttribute="trailing" secondItem="CpZ-Xc-3jL" secondAttribute="trailing" constant="5" id="V3i-g0-gjn"/>
+                    <constraint firstItem="CpZ-Xc-3jL" firstAttribute="top" secondItem="etJ-om-zV8" secondAttribute="top" constant="5" id="Xww-JT-YRr"/>
+                    <constraint firstItem="CpZ-Xc-3jL" firstAttribute="leading" secondItem="etJ-om-zV8" secondAttribute="leading" constant="5" id="uge-Ur-pOX"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="detailLabel" destination="CpZ-Xc-3jL" id="Xhg-LC-GeM"/>
