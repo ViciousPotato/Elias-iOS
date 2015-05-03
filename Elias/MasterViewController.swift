@@ -140,14 +140,14 @@ class MasterViewController:
     let bit = delegate.bits[indexPath.row] as Bit
 
     if let cell = tableView.dequeueReusableCellWithIdentifier("BitSummaryCell") as? BitSummaryCell {
-      cell.detailLabel.text = bit.content
+      cell.detailLabel.attributedText = Util.htmlToAttributedString(bit.content)
       return cell
     }
     else {
       let nib = NSBundle.mainBundle().loadNibNamed("BitSummaryCell", owner: self, options: nil)
       let cell = nib[0] as! BitSummaryCell
 
-      cell.detailLabel.text = bit.content
+      cell.detailLabel.attributedText = Util.htmlToAttributedString(bit.content)
       
       return cell
     }

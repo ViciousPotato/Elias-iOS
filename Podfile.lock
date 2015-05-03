@@ -20,16 +20,30 @@ PODS:
   - AFNetworking/UIKit (2.5.0):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - DTCoreText (1.6.15):
+    - DTFoundation/Core (~> 1.7.5)
+    - DTFoundation/DTAnimatedGIF (~> 1.7.5)
+    - DTFoundation/DTHTMLParser (~> 1.7.5)
+    - DTFoundation/UIKit (~> 1.7.5)
+  - DTFoundation/Core (1.7.5)
+  - DTFoundation/DTAnimatedGIF (1.7.5)
+  - DTFoundation/DTHTMLParser (1.7.5):
+    - DTFoundation/Core
+  - DTFoundation/UIKit (1.7.5):
+    - DTFoundation/Core
   - MBProgressHUD (0.9.1)
   - Toast (2.4)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.5.0)
+  - DTCoreText
   - MBProgressHUD (~> 0.8)
   - Toast (~> 2.4)
 
 SPEC CHECKSUMS:
   AFNetworking: 96ac9bf3eda33582701cb1fcc5b896aa1e20311e
+  DTCoreText: 13ce06e63204a3b47c9db974e3d9be982bb0b1ed
+  DTFoundation: 1d28080c20c3da041706545363f8238ab53a6204
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
   Toast: 0773b8fc0e97352ca6054517bec7ebdd4110029d
 

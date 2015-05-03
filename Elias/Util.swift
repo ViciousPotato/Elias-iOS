@@ -11,7 +11,7 @@ import Foundation
 struct Util {
   static var now = Int(NSTimeIntervalSince1970)
   
-  #if TARGET_IPHONE_SIMULATOR
+  #if (arch(i386) || arch(x86_64)) && os(iOS)
   static var baseUrl = "http://127.0.0.1:3000"
   #else
   static var baseUrl = "http://viciouspotato.me"
@@ -29,5 +29,10 @@ struct Util {
     let blue = CGFloat(rgbValue & 0xFF) / 256.0
     
     return UIColor(red:red, green:green, blue:blue, alpha:1.0)
+  }
+  
+  static func htmlToAttributedString(html: String) -> NSAttributedString {
+    let contentData = html.dataUsingEncoding(NSUTF8StringEncoding)
+    return NSAttributedString(HTMLData: contentData, options: [DTUseiOS6Attributes: true], documentAttributes: nil);
   }
 }

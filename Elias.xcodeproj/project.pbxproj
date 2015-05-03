@@ -112,11 +112,11 @@
 		CB235C2D1A5D8B690081FEEA /* Elias */ = {
 			isa = PBXGroup;
 			children = (
+				CBAA811E1AF64553007A05A3 /* Model */,
 				CB235C301A5D8B690081FEEA /* AppDelegate.swift */,
 				CB235C321A5D8B6A0081FEEA /* MasterViewController.swift */,
 				CB70DB001AF13D74001B8025 /* BitSummaryCell.xib */,
 				CB70DB021AF13E95001B8025 /* BitSummaryCell.swift */,
-				CB430AE41A8B83A0000E9558 /* BitModel.swift */,
 				CB235C341A5D8B6A0081FEEA /* DetailViewController.swift */,
 				CB235C361A5D8B6A0081FEEA /* Main.storyboard */,
 				CB235C391A5D8B6A0081FEEA /* Images.xcassets */,
@@ -151,6 +151,14 @@
 				CB235C471A5D8B6A0081FEEA /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CBAA811E1AF64553007A05A3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CB430AE41A8B83A0000E9558 /* BitModel.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
