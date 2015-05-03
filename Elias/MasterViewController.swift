@@ -21,6 +21,8 @@ class MasterViewController:
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+    
     let tblView = self.view as! UITableView
     tblView.estimatedRowHeight = 44.0
     tblView.rowHeight = UITableViewAutomaticDimension

@@ -17,7 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
   
-    // Doing some initialization
+    self.window?.tintColor = UIColor.whiteColor()
+    
+    let appearance = UINavigationBar.appearance()
+    appearance.barTintColor = Util.UIColorFromHex(UInt32(0x2ab081))
+
+    UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
+    
     downloadManager = AFHTTPRequestOperationManager()
     
     let defaults = NSUserDefaults.standardUserDefaults()
