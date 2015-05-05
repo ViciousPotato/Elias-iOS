@@ -141,6 +141,8 @@ class MasterViewController:
 
     if let cell = tableView.dequeueReusableCellWithIdentifier("BitSummaryCell") as? BitSummaryCell {
       cell.detailLabel.attributedText = Util.htmlToAttributedString(bit.content)
+      self.setLableShadow(cell.detailLabel)
+
       return cell
     }
     else {
@@ -148,9 +150,19 @@ class MasterViewController:
       let cell = nib[0] as! BitSummaryCell
 
       cell.detailLabel.attributedText = Util.htmlToAttributedString(bit.content)
-      
+      self.setLableShadow(cell.detailLabel)
+
       return cell
     }
+  }
+  
+  func setLableShadow(lbl: UILabel) {
+    lbl.backgroundColor = UIColor.whiteColor()
+    lbl.layer.shadowColor = Util.UIColorFromHex(0x333333).CGColor
+    lbl.layer.shadowOpacity = 1.0
+    lbl.layer.shadowRadius = 2.0
+    lbl.layer.shadowOffset = CGSizeMake(0, 1)
+    lbl.clipsToBounds = false
   }
 
   override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -12,22 +13,40 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZXH-oV-QCR" id="etJ-om-zV8">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CpZ-Xc-3jL">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tY-21-f72">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="147"/>
-                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" red="0.89271622470000001" green="0.89271622470000001" blue="0.89271622470000001" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="CpZ-Xc-3jL" secondAttribute="bottom" constant="5" id="JMT-lH-yYU"/>
-                    <constraint firstAttribute="trailing" secondItem="CpZ-Xc-3jL" secondAttribute="trailing" constant="5" id="V3i-g0-gjn"/>
-                    <constraint firstItem="CpZ-Xc-3jL" firstAttribute="top" secondItem="etJ-om-zV8" secondAttribute="top" constant="5" id="Xww-JT-YRr"/>
-                    <constraint firstItem="CpZ-Xc-3jL" firstAttribute="leading" secondItem="etJ-om-zV8" secondAttribute="leading" constant="5" id="uge-Ur-pOX"/>
+                    <constraint firstItem="3tY-21-f72" firstAttribute="leading" secondItem="etJ-om-zV8" secondAttribute="leading" id="2wS-cg-D9Z"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="3tY-21-f72" secondAttribute="trailing" id="9df-ln-EBB"/>
+                    <constraint firstAttribute="bottom" secondItem="3tY-21-f72" secondAttribute="bottom" constant="6" id="AJZ-mu-BFb"/>
+                    <constraint firstAttribute="trailing" secondItem="3tY-21-f72" secondAttribute="trailing" id="UUr-dZ-DWb"/>
+                    <constraint firstItem="3tY-21-f72" firstAttribute="top" secondItem="etJ-om-zV8" secondAttribute="topMargin" constant="6" id="ijF-rX-EV6"/>
+                    <constraint firstItem="3tY-21-f72" firstAttribute="top" secondItem="etJ-om-zV8" secondAttribute="top" constant="6" id="lUY-Y7-tWV"/>
+                    <constraint firstItem="3tY-21-f72" firstAttribute="top" secondItem="etJ-om-zV8" secondAttribute="top" constant="6" id="n7F-fa-G5d"/>
+                    <constraint firstAttribute="bottom" secondItem="3tY-21-f72" secondAttribute="bottom" constant="6" id="qTc-c5-OOJ"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="3tY-21-f72" secondAttribute="bottom" constant="6" id="sHg-gg-lZy"/>
+                    <constraint firstItem="3tY-21-f72" firstAttribute="leading" secondItem="etJ-om-zV8" secondAttribute="leadingMargin" id="uYM-3q-Heg"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="9df-ln-EBB"/>
+                        <exclude reference="AJZ-mu-BFb"/>
+                        <exclude reference="ijF-rX-EV6"/>
+                        <exclude reference="lUY-Y7-tWV"/>
+                        <exclude reference="sHg-gg-lZy"/>
+                        <exclude reference="uYM-3q-Heg"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <connections>
-                <outlet property="detailLabel" destination="CpZ-Xc-3jL" id="Xhg-LC-GeM"/>
+                <outlet property="detailLabel" destination="3tY-21-f72" id="irT-ky-7ca"/>
             </connections>
             <point key="canvasLocation" x="427" y="474"/>
         </tableViewCell>
