@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB02246E1AFA50E900C9525B /* UILabelInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB02246D1AFA50E900C9525B /* UILabelInsets.swift */; };
 		CB1F308B1A87B48B008DADEF /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1F308A1A87B48B008DADEF /* Util.swift */; };
 		CB235C311A5D8B6A0081FEEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB235C301A5D8B690081FEEA /* AppDelegate.swift */; };
 		CB235C331A5D8B6A0081FEEA /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB235C321A5D8B6A0081FEEA /* MasterViewController.swift */; };
@@ -33,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		1E58CFD137881927535D02EC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB02246D1AFA50E900C9525B /* UILabelInsets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelInsets.swift; sourceTree = "<group>"; };
 		CB1F308A1A87B48B008DADEF /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		CB235C2B1A5D8B690081FEEA /* Elias.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Elias.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB235C2F1A5D8B690081FEEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				CB235C2E1A5D8B690081FEEA /* Supporting Files */,
 				CB39FE071A7A83910055DD47 /* Elias-Bridging-Header.h */,
 				CB1F308A1A87B48B008DADEF /* Util.swift */,
+				CB02246D1AFA50E900C9525B /* UILabelInsets.swift */,
 			);
 			path = Elias;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB02246E1AFA50E900C9525B /* UILabelInsets.swift in Sources */,
 				CB430AE51A8B83A0000E9558 /* BitModel.swift in Sources */,
 				CB235C351A5D8B6A0081FEEA /* DetailViewController.swift in Sources */,
 				CB70DB031AF13E95001B8025 /* BitSummaryCell.swift in Sources */,

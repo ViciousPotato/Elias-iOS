@@ -31,7 +31,7 @@ struct Util {
     return UIColor(red:red, green:green, blue:blue, alpha:1.0)
   }
   
-  static func htmlToAttributedString(html: String) -> NSAttributedString {
+  static func htmlToAttributedString(html: String, attrs: [NSObject : AnyObject]) -> NSAttributedString {
     let contentData = html.dataUsingEncoding(NSUTF8StringEncoding)
     return NSAttributedString(HTMLData: contentData, options: [DTUseiOS6Attributes: true], documentAttributes: nil);
   }

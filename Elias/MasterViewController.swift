@@ -138,9 +138,15 @@ class MasterViewController:
 
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let bit = delegate.bits[indexPath.row] as Bit
+    var style =  NSParagraphStyle.defaultParagraphStyle().mutableCopy() as! NSMutableParagraphStyle
+    style.alignment = .Justified
+    style.firstLineHeadIndent = 10.0
+    style.headIndent = 10.0
+    style.tailIndent = -10.0
+    let styleAttr = [NSParagraphStyleAttributeName : style]
 
     if let cell = tableView.dequeueReusableCellWithIdentifier("BitSummaryCell") as? BitSummaryCell {
-      cell.detailLabel.attributedText = Util.htmlToAttributedString(bit.content)
+      cell.detailLabel.attributedText = Util.htmlToAttributedString(bit.content, attrs: styleAttr)
       self.setLableShadow(cell.detailLabel)
 
       return cell
@@ -149,7 +155,7 @@ class MasterViewController:
       let nib = NSBundle.mainBundle().loadNibNamed("BitSummaryCell", owner: self, options: nil)
       let cell = nib[0] as! BitSummaryCell
 
-      cell.detailLabel.attributedText = Util.htmlToAttributedString(bit.content)
+      cell.detailLabel.attributedText = Util.htmlToAttributedString(bit.content, attrs: styleAttr)
       self.setLableShadow(cell.detailLabel)
 
       return cell
@@ -158,11 +164,12 @@ class MasterViewController:
   
   func setLableShadow(lbl: UILabel) {
     lbl.backgroundColor = UIColor.whiteColor()
-    lbl.layer.shadowColor = Util.UIColorFromHex(0x333333).CGColor
-    lbl.layer.shadowOpacity = 1.0
-    lbl.layer.shadowRadius = 2.0
-    lbl.layer.shadowOffset = CGSizeMake(0, 1)
-    lbl.clipsToBounds = false
+    
+    lbl.layer.borderColor = Util.UIColorFromHex(0xd8d8d8).CGColor
+    lbl.layer.borderWidth = 1
+    // TODO ?
+    lbl.layer.frame = CGRectMake(-1, lbl.layer.frame.size.height-1, lbl.layer.frame.size.width, lbl.layer.frame.size.height)
+    
   }
 
   override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
