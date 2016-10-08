@@ -15,7 +15,7 @@ class Bit {
         self.content = content
     }
     
-    class func fromJSONDic(dic: NSDictionary) -> Bit {
+    class func fromJSONDic(_ dic: NSDictionary) -> Bit {
         return Bit(content: dic["content"] as! String)
     }
 }

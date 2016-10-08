@@ -216,6 +216,7 @@
 					CB235C2A1A5D8B690081FEEA = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = GW2B4FS5Y6;
+						LastSwiftMigration = 0800;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -225,6 +226,7 @@
 					CB235C411A5D8B6A0081FEEA = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = GW2B4FS5Y6;
+						LastSwiftMigration = 0800;
 						TestTargetID = CB235C2A1A5D8B690081FEEA;
 					};
 				};
@@ -446,6 +448,7 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Elias/Elias-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -463,6 +466,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Elias/Elias-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -485,6 +489,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Elias.app/Elias";
 			};
 			name = Debug;
@@ -503,6 +508,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Elias.app/Elias";
 			};
 			name = Release;

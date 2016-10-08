@@ -9,8 +9,8 @@
 import Foundation
 
 @objc(UILabelInsets) class UILabelInsets : UILabel {
-  override func drawTextInRect(rect: CGRect) {
+  override func drawText(in rect: CGRect) {
     let insets = UIEdgeInsets(top: 2, left: 5, bottom: 2, right: 5)
-    super.drawTextInRect(UIEdgeInsetsInsetRect(rect, insets))
+    super.drawText(in: UIEdgeInsetsInsetRect(rect, insets))
   }
 }
